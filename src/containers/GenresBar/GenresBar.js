@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { Component } from 'react'
 import AppBar from '@material-ui/core/AppBar';
 import {  withStyles } from '@material-ui/core/styles';
@@ -5,7 +6,6 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Grid from '@material-ui/core/Grid';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import ErrorComponent from '../../components/Error/ErrorComponent';
 import MediaCard from '../../components/Crads/MediaCard';
 import NotLoginComponent from '../../components/NotLogin/NotLoginComponent'
 import Cookies from 'js-cookie';
@@ -51,6 +51,7 @@ export class GenresBar extends Component {
       var e, r = /([^&;=]+)=?([^&;]*)/g,
           q = window.location.hash.substring(1);
       while ( e = r.exec(q)) {
+        /*eslint no-unused-expressions: "error"*/
          hashParams[e[1]] = decodeURIComponent(e[2]);
       }
       return hashParams;
@@ -62,7 +63,7 @@ export class GenresBar extends Component {
 
     let params = getHashParams();
             let access_token = process.env.REACT_APP_DEV_TOKEN_MOCK || params.access_token,
-            refresh_token = params.refresh_token,
+            // refresh_token = params.refresh_token,
             error = params.error;
 
     if (error) {
