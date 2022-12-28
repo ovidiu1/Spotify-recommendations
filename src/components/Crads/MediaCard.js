@@ -50,7 +50,7 @@ const MediaCard = (props) => {
   const { classes } = props;
   // console.info("data from MediaCard", tracks);
  const embedLink = `https://open.spotify.com/embed/track/`
- const urilink  = `https://open.spotify.com/go?uri=`
+//  const urilink  = `https://open.spotify.com/go?uri=`
   return (
     <React.Fragment>
       {props.tracks.map(track => (
